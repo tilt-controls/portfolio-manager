@@ -2,7 +2,7 @@ package com.pluralsight.portfoliomanager.model;
 
 import java.math.BigDecimal;
 
-public abstract class FixedAsset {
+public abstract class FixedAsset implements Valuable {
     private String name;
     private BigDecimal marketValue;
 
@@ -15,6 +15,7 @@ public abstract class FixedAsset {
         return name;
     }
 
+    @Override
     public BigDecimal getValue() {
         return marketValue;
     }

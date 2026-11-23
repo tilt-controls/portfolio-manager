@@ -2,7 +2,7 @@ package com.pluralsight.portfoliomanager.model;
 
 import java.math.BigDecimal;
 
-public abstract class Account {
+public abstract class Account implements Valuable{
     private int accountNumber;
     private String name;
     private BigDecimal balance;
@@ -29,6 +29,7 @@ public abstract class Account {
         this.balance = balance;
     }
 
+    @Override
     public BigDecimal getValue() {
         return balance;
     }
