@@ -32,23 +32,23 @@ public class Portfolio implements Valuable {
         return name;
     }
 
-    public String getMostValuable() {
+    public Valuable getMostValuable() {
         Valuable highestValue = assets.get(0);
         for (Valuable valuable : assets) {
             if (valuable.getValue().compareTo(highestValue.getValue()) > 0) {
                 highestValue = valuable;
             }
         }
-        return highestValue.getName();
+        return highestValue;
     }
 
-    public String getLeastValuable() {
+    public Valuable getLeastValuable() {
         Valuable leastValue = assets.get(0);
         for (Valuable valuable : assets) {
             if (valuable.getValue().compareTo(leastValue.getValue()) < 0) {
                 leastValue = valuable;
             }
         }
-        return leastValue.getName();
+        return leastValue;
     }
 }

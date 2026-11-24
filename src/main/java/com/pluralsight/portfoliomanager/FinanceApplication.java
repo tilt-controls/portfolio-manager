@@ -34,8 +34,8 @@ public class FinanceApplication {
 
 
         System.out.println(p1.getValue());
-        System.out.println(p1.getMostValuable());
-        System.out.println(p1.getLeastValuable());
+        System.out.println(p1.getMostValuable().getName());
+        System.out.println(p1.getLeastValuable().getName());
 
 
     }
