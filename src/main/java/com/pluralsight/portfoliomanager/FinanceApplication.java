@@ -21,8 +21,8 @@ public class FinanceApplication {
         House house = new House("Ranch house", new BigDecimal("325000.00"), 1998, 1850, 3);
         Gold gold = new Gold("Gold coins", new BigDecimal("12000.00"), 5.0);
         Jewelry ring = new Jewelry("Grandma's ring", new BigDecimal("2500.00"), 14.0);
-        BankAccount bankAccount = new BankAccount(1234, "jp", new BigDecimal("150000"));
-        CreditCard card = new CreditCard(123, "jp", new BigDecimal("1000"));
+        BankAccount bankAccount = new BankAccount(1234, "jp's chase account", new BigDecimal("150000"));
+        CreditCard card = new CreditCard(123, "jp's discover Card", new BigDecimal("1000"));
 
         List<Valuable> assets = new ArrayList<Valuable>();
         Portfolio p1 = new Portfolio("My Portfolio", "jp", assets);
@@ -34,6 +34,7 @@ public class FinanceApplication {
 
         System.out.println(p1.getValue());
         System.out.println(p1.getMostValuable());
+        System.out.println(p1.getLeastValuable());
 
 
     }
