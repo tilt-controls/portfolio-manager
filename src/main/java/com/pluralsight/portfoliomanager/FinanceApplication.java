@@ -32,6 +32,7 @@ public class FinanceApplication {
         p1.add(bankAccount);
         p1.add(card);
 
+
         System.out.println(p1.getValue());
         System.out.println(p1.getMostValuable());
         System.out.println(p1.getLeastValuable());

@@ -3,7 +3,7 @@ package com.pluralsight.portfoliomanager.model;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class Portfolio {
+public class Portfolio implements Valuable {
     private String name;
     private String owner;
     private List<Valuable> assets;
@@ -18,12 +18,18 @@ public class Portfolio {
         assets.add(valuable);
     }
 
+    @Override
     public BigDecimal getValue() {
         BigDecimal value = BigDecimal.ZERO;
         for (Valuable valuable : assets) {
             value = value.add(valuable.getValue());
         }
         return value;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     public String getMostValuable() {
