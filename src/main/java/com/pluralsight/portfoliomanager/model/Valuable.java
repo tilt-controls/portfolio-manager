@@ -4,4 +4,8 @@ import java.math.BigDecimal;
 
 public interface Valuable {
     public BigDecimal getValue();
+    String getName();
+
 }
+
+

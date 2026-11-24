@@ -15,4 +15,5 @@ public class BankAccount extends Account {
     public void withdraw(BigDecimal amount) {
         setBalance(getBalance().subtract(amount));
     }
+
 }
